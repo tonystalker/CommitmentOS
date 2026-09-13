@@ -20,7 +20,7 @@ CommitmentOS is the missing layer: an autonomous agent that **observes** cross-c
 |---|---|
 | [Architecture →](./docs/architecture.md) | Full pipeline breakdown, all 9 stages, data model, security properties, component API |
 | [Reliability & Evaluation →](./docs/reliability.md) | Threat model, reliability mechanisms, full evaluation suite results, threshold sweep |
-| [Demo Guide →](./docs/demo.md) | 5-minute presentation script, golden demo chain step-by-step, key talking points |
+
 
 ---
 
