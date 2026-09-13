@@ -24,7 +24,7 @@ CommitmentOS is the missing layer: an autonomous agent that **observes** cross-c
 
 ---
 
-## 🏗️ Technical Execution (30%)
+## Architecture
 
 ### Architecture: OBSERVE → EXTRACT → RESOLVE → DEDUP → RISK → PLAN → POLICY → ACT → VERIFY
 
@@ -89,7 +89,7 @@ Every transition is written to `transition_history` (append-only JSON) with time
 
 ---
 
-## 📊 Reliability & Evaluation (25%)
+## Reliability & Evaluation
 
 ### Automated Evaluation Suite
 
@@ -127,7 +127,7 @@ Results are persisted to `evaluation/last_run.json` and surfaced live in the `/e
 
 ---
 
-## 🎯 Usefulness (20%)
+## What It Does
 
 ### The Problem It Solves
 
@@ -165,7 +165,7 @@ Rules are human-editable in the Policy UI (`/policy`) or via `PUT /api/policy/{a
 
 ---
 
-## 💡 Originality (15%)
+## Design Philosophy
 
 CommitmentOS is not a chatbot wrapper or a workflow automation tool. It's a novel abstraction:
 
@@ -181,7 +181,7 @@ Key original contributions:
 
 ---
 
-## 🎬 Demo Clarity (10%)
+## Demo
 
 ### Golden Demo Chain (5 minutes)
 
