@@ -20,7 +20,6 @@ CommitmentOS is the missing layer: an autonomous agent that **observes** cross-c
 |---|---|
 | [Architecture →](./docs/architecture.md) | Full pipeline breakdown, all 9 stages, data model, security properties, component API |
 | [Reliability & Evaluation →](./docs/reliability.md) | Threat model, reliability mechanisms, full evaluation suite results, threshold sweep |
-| [Demo Guide →](./docs/demo.md) | 5-minute presentation script, golden demo chain step-by-step, key talking points |
 
 ---
 
@@ -181,47 +180,7 @@ Key original contributions:
 
 ---
 
-## Demo
-
-### Golden Demo Chain (5 minutes)
-
-**Setup:** Seed the Acme Corp demo data.
-```bash
-cd apps/api && python ../../evaluation/seed_demo.py
-```
-
-**Step 1 — Slack evidence**
-> Rahul: *"I'll send the revised pricing doc to the customer by tomorrow."*
-
-**Step 2 — Gmail evidence**
-> Thread: *"Still waiting for Finance to confirm the discount before we can send."*
-
-**Step 3 — Linear reality check**
-> No pricing task exists for Rahul.
-
-**Step 4 — User prompt**
-> *"Find commitments at risk and take care of whatever you can."*
-
-**What the agent does (watch the SSE stream):**
-1. `OBSERVE` — fetches Slack + Gmail + Linear
-2. `EXTRACT` — LLM extracts commitment: Rahul / send pricing doc / deadline tomorrow
-3. `RESOLVE` — Rahul in Slack resolved to rahul@acme.com
-4. `DEDUP` — Slack mention + Gmail thread → one canonical commitment
-5. `RISK` — overdue score HIGH (no Linear task, deadline passed, external stakeholder)
-6. `PLAN` — three proposed actions: create Linear task, post Slack update, draft customer email
-7. `POLICY` — Linear task: **AUTO** ✓, Slack ping: **AUTO** ✓, external email: **APPROVAL** ⏳
-8. `ACT` — Linear task created, Slack message posted; email held for approval
-9. `VERIFY` — Linear task confirmed to exist via API
-
-**Step 5 — Human approves**
-Click **Approve** on the email action → Gmail sends → verifier confirms delivery.
-
-**Step 6 — Pattern query**
-> *"Why does this keep happening with Finance?"*
-
-Supermemory surfaces: *Finance blocking on pricing has caused 3 commitment failures this quarter.*
-
-### Running the Demo Locally
+## Quick Start
 
 ```bash
 # 1. Start Postgres (or skip — SQLite fallback works out of the box)
@@ -238,14 +197,11 @@ cd apps/api && pip install -e .
 .\scripts\start_api.ps1
 # → http://localhost:8000/docs
 
-# 5. Seed demo data
-python ../../evaluation/seed_demo.py
-
-# 6. Start frontend
+# 5. Start frontend
 cd apps/web && npm install && npm run dev
 # → http://localhost:3000
 
-# 7. (Optional) Gmail OAuth
+# 6. (Optional) Gmail OAuth
 python scripts/gmail_auth.py
 ```
 
