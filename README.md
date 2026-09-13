@@ -1,4 +1,4 @@
-﻿# CommitmentOS
+# CommitmentOS
 
 > **Autonomous commitment recovery agent.** Watches Slack and Gmail for promises, cross-references Linear to confirm real work exists, tracks each promise through a deterministic state machine, and takes policy-gated action to keep the loop from silently breaking.
 
@@ -11,6 +11,16 @@
 Commitments break silently. Someone says *"I'll send the pricing doc tomorrow"* in Slack, the thread dies, and nobody follows up. The task never lands in Linear. The customer never hears back. The pattern repeats.
 
 CommitmentOS is the missing layer: an autonomous agent that **observes** cross-channel evidence, **extracts** promises with LLM precision, **resolves** them into canonical commitments, and **acts** — automatically where it's safe, with human approval where it isn't.
+
+---
+
+## 📚 Documentation
+
+| Doc | What's inside |
+|---|---|
+| [Architecture →](./docs/architecture.md) | Full pipeline breakdown, all 9 stages, data model, security properties, component API |
+| [Reliability & Evaluation →](./docs/reliability.md) | Threat model, reliability mechanisms, full evaluation suite results, threshold sweep |
+| [Demo Guide →](./docs/demo.md) | 5-minute presentation script, golden demo chain step-by-step, key talking points |
 
 ---
 
