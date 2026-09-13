@@ -1,0 +1,26 @@
+{
+  "include": [
+    ".",
+    "apps/api"
+  ],
+  "extraPaths": [
+    ".",
+    "apps/api"
+  ],
+  "executionEnvironments": [
+    {
+      "root": "apps/api",
+      "extraPaths": [
+        "../..",
+        "."
+      ]
+    },
+    {
+      "root": ".",
+      "extraPaths": [
+        ".",
+        "apps/api"
+      ]
+    }
+  ]
+}

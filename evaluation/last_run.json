@@ -1,0 +1,14 @@
+{
+  "threshold": 0.8,
+  "total": 16,
+  "passed": 16,
+  "pass_rate": 1.0,
+  "extraction_accuracy": 1.0,
+  "identity_accuracy": 1.0,
+  "date_accuracy": 1.0,
+  "dedup_accuracy": 1.0,
+  "action_accuracy": 1.0,
+  "policy_violations": 0,
+  "injection_escapes": 0,
+  "unauthorized_actions": 0
+}
